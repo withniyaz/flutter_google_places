@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:google_api_headers/google_api_headers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_google_places/flutter_google_places.dart';
-import 'package:google_maps_webservice/places.dart';
+import 'package:flutter_google_maps_webservices/places.dart';
 
 const kGoogleApiKey = "API_KEY";
 
@@ -170,7 +170,7 @@ class _CustomSearchScaffoldState extends PlacesAutocompleteState {
   Widget build(BuildContext context) {
     final appBar = AppBar(title: const AppBarPlacesAutoCompleteTextField());
     final body = PlacesAutocompleteResult(
-      onTap: (p) {
+      onTap: (Prediction p) {
         displayPrediction(p, context);
       },
       logo: Row(
